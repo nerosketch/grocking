@@ -3,10 +3,9 @@
 #include <cmath>
 #include <iostream>
 #include <unistd.h>
+#include "mytypes.h"
 
 using namespace std;
-
-typedef vector<int> vectorint;
 
 
 int bin_search(const vectorint arr, int search_digit, int& counter)

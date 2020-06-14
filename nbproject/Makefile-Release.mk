@@ -36,7 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/search_algs.o
+	${OBJECTDIR}/search_algs.o \
+	${OBJECTDIR}/sort_algs.o
 
 
 # C Compiler Flags
@@ -72,6 +73,11 @@ ${OBJECTDIR}/search_algs.o: search_algs.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/search_algs.o search_algs.cpp
+
+${OBJECTDIR}/sort_algs.o: sort_algs.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sort_algs.o sort_algs.cpp
 
 # Subprojects
 .build-subprojects:

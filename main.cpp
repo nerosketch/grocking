@@ -7,7 +7,7 @@
 
 #include <cstdlib>
 
-#include "search_algs.h"
+#include "sort_algs.h"
 
 using namespace std;
 
@@ -15,6 +15,6 @@ using namespace std;
 
 int main (int argc, char** argv)
 {
-    test_bin_search();
+    test_sort_pick();
     return 0;
 }
