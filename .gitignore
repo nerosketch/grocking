@@ -1,3 +1,10 @@
+*.cmake
+*.o
+*.inc
+Makefile
+CMakeCache.txt
+CMakeFiles/
 build/
 dist/
 nbproject/
+grocking
