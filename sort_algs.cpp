@@ -1,5 +1,4 @@
 #include <vector>
-#include <iterator>
 #include <algorithm>
 #include <iostream>
 #include "sort_algs.h"
@@ -18,7 +17,7 @@ static vectorint sort_pick(vectorint& arr)
       vectorint::iterator min_elem_it = min_element(arr.begin (), arr.end());
       //int min_elem_index = distance(arr.begin(), min_elem_it);
 
-      cout << "Found el: " << *min_elem_it << endl;
+      cout << "Нашли самый маленький: " << *min_elem_it << endl;
 
       new_arr.push_back(
         *min_elem_it
@@ -33,6 +32,7 @@ static vectorint sort_pick(vectorint& arr)
 
 void test_sort_pick()
 {
+  cout << "-=Сортировка выбором=-" << endl;
   vectorint arr = {5, 2, 8, 3, 6, 1, 9};
 
   cout << "Исходный массив: ";
