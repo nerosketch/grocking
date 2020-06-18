@@ -50,7 +50,7 @@ int test_bin_search ()
     int search_dg = 19;
     int counter = 0;
     int ind = bin_search(arr, search_dg, counter);
-    if(ind > 0)
+    if(ind >= 0)
     {
         cout << "Нашли, индекс " << search_dg << " = " << ind << " Шагов: " << counter << endl;
     }
