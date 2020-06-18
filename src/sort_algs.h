@@ -12,6 +12,9 @@
 // Сортировка выбором
 void test_sort_pick();
 
+// Быстрая Сортировка
+void test_myqsort();
+
 
 #endif /* SORT_INS_H */
 

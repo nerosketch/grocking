@@ -1,6 +1,7 @@
 *.cmake
 *.o
 *.inc
+*.json
 Makefile
 CMakeCache.txt
 CMakeFiles/

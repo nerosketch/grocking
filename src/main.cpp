@@ -20,5 +20,6 @@ int main (int argc, char** argv)
     OUT(test_sort_pick)
     OUT(test_bin_search)
     OUT(test_sum)
+    OUT(test_myqsort)
     return 0;
 }
