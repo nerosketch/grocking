@@ -4,8 +4,8 @@
 
 void print_vectorint(vectorint& _vec)
 {
-    vectorint::iterator el_it = _vec.begin();
-    vectorint::iterator end_vec = _vec.end();
+    auto el_it = _vec.begin();
+    auto end_vec = _vec.end();
 
     std::cout << "[";
 

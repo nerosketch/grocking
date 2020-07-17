@@ -1,14 +1,12 @@
 #include "search_algs.h"
-#include <vector>
 #include <cmath>
 #include <iostream>
-#include <unistd.h>
 #include "mytypes.h"
 
 using namespace std;
 
 
-int bin_search(const vectorint arr, int search_digit, int& counter)
+int bin_search(const vectorint& arr, int search_digit, int& counter)
 {
     int low = 0;
     int top = arr.size();
@@ -32,7 +30,6 @@ int bin_search(const vectorint arr, int search_digit, int& counter)
         counter++;
         //sleep(1);
     }
-
 
     return 0;
 }

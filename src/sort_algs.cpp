@@ -17,7 +17,7 @@ static vectorint sort_pick(vectorint& arr)
     int arr_size = arr.size();
 
     while (arr_size > 0) {
-        vectorint::iterator min_elem_it = min_element(arr.begin(), arr.end());
+        auto min_elem_it = min_element(arr.begin(), arr.end());
         //int min_elem_index = distance(arr.begin(), min_elem_it);
 
         cout << "Нашли самый маленький: " << *min_elem_it << endl;
@@ -58,7 +58,7 @@ static vectorint myqsort(const vectorint& arr)
     const vectorint::size_type arr_size = arr.size();
 
     // базовый случай
-    cout << "---------myqsort----------" << endl << "arr_size:" << arr_size << endl;
+//    cout << "---------myqsort----------" << endl << "arr_size:" << arr_size << endl;
     if (arr_size < 2) {
         return arr;
     }

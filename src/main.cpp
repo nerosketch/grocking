@@ -10,6 +10,7 @@
 #include "sort_algs.h"
 #include "search_algs.h"
 #include "archs.h"
+#include "breath-first-search/bfs.h"
 
 using namespace std;
 
@@ -21,5 +22,6 @@ int main(int argc, char** argv)
     OUT(test_bin_search)
     OUT(test_sum)
     OUT(test_myqsort)
+    OUT(breath_first_search)
     return 0;
 }

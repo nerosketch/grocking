@@ -2,7 +2,4 @@
 
 mkdir build
 cd ./build
-cmake ..
-make
-./grocking
-
+cmake .. && make && ./grocking
