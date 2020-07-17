@@ -8,8 +8,7 @@ using namespace std;
 
 static int recursive_sum(vectorint::iterator it, const vectorint::const_iterator& end_it)
 {
-    if (it == end_it)
-    {
+    if (it == end_it) {
         return 0;
     }
 
@@ -19,17 +18,14 @@ static int recursive_sum(vectorint::iterator it, const vectorint::const_iterator
 
 static int sum(vectorint& vec)
 {
-    vectorint::size_type vec_size = vec.size ();
-    if (vec_size == 0)
-    {
+    vectorint::size_type vec_size = vec.size();
+    if (vec_size == 0) {
         return 0;
-    }
-    else if (vec_size == 1)
-    {
+    } else if (vec_size == 1) {
         return vec[0];
     }
 
-    return recursive_sum(vec.begin (), vec.end());
+    return recursive_sum(vec.begin(), vec.end());
 }
 
 
@@ -42,12 +38,10 @@ static void check_arr(vectorint& arr, const int expected_res)
     int res = sum(arr);
 
     cout << "  - Их сумма: " << res << " А должна быть " << expected_res << "!";
-    if(res == expected_res)
+    if (res == expected_res)
     {
-      cout << " Всё правильно :)";
-    }
-    else
-    {
+        cout << " Всё правильно :)";
+    } else {
         cout << " Не правильно...";
     }
     cout << endl;

@@ -12,7 +12,7 @@
 /*
  * Бинарный поиск
  */
-int test_bin_search ();
+int test_bin_search();
 
 
 #endif /* SEARCH_ALGS_H */
