@@ -1,22 +1,10 @@
-#include <iostream>
 #include "mytypes.h"
 
 
-void print_vectorint(vectorint& _vec)
+std::ostream& operator<<(std::ostream& out, vectorint& _vec)
 {
-    auto el_it = _vec.begin();
-    auto end_vec = _vec.end();
+    print_iterable(out, _vec);
 
-    std::cout << "[";
-
-    while (el_it != end_vec) {
-        std::cout << (*el_it);
-        if ((el_it + 1) != end_vec) {
-            std::cout << ", ";
-        }
-        el_it++;
-    }
-
-    std::cout << "]";
+    return out;
 }
 

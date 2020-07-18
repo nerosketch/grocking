@@ -9,23 +9,38 @@
 #define MYTYPES_H
 
 #include <vector>
+#include <iostream>
 
 typedef std::vector<int> vectorint;
 
-// std::ostream& operator<< (std::ostream& sout, vectorint& _vec)
-//{
-//  vectorint::iterator end_vec = _vec.end ();
-//  for (vectorint::iterator el_it = _vec.begin(); el_it != end_vec; el_it ++)
-//  {
-//    sout << (*el_it) << ", ";
-//  }
-//  sout << (*end_vec) << std::endl;
-//
-//  return sout;
-//}
+
+template<class T>
+void print_iterable(std::ostream& out, T& _iterable)
+{
+    auto el_it = _iterable.begin();
+    auto end_vec = _iterable.end();
+
+    out << "[";
+
+    while (el_it != end_vec) {
+        out << (*el_it);
+        el_it++;
+        if (el_it != end_vec) {
+            out << ", ";
+        }
+    }
+
+    out << "]";
+}
+
+template<class T>
+void print_iterable(T& _iterable)
+{
+    print_iterable(std::cout, _iterable);
+}
 
 
-void print_vectorint(vectorint& _vec);
+std::ostream& operator<<(std::ostream& out, vectorint& _vec);
 
 
 #endif /* MYTYPES_H */

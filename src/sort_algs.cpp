@@ -38,14 +38,10 @@ void test_sort_pick()
     cout << "-=Сортировка выбором=-" << endl;
     vectorint arr = {5, 2, 8, 3, 6, 1, 9};
 
-    cout << "Исходный массив: ";
-    print_vectorint(arr);
-    cout << endl;
+    cout << "Исходный массив: " << arr << endl;
 
     vectorint res = sort_pick(arr);
-    cout << "Получилось: ";
-    print_vectorint(res);
-    cout << endl;
+    cout << "Получилось: " << res << endl;
 }
 
 
@@ -71,9 +67,7 @@ static vectorint myqsort(const vectorint& arr)
             less.push_back(el);
         }
     }
-    cout << "less:";
-    print_vectorint(less);
-    cout << endl;
+    cout << "less:" << less << endl;
 
     vectorint greater;
     greater.reserve(arr_size);
@@ -82,9 +76,7 @@ static vectorint myqsort(const vectorint& arr)
             greater.push_back(el);
         }
     }
-    cout << "greater:";
-    print_vectorint(greater);
-    cout << endl;
+    cout << "greater:" << greater << endl;
 
     vectorint sorted_less_and_res = myqsort(less);
     vectorint sorted_greater = myqsort(greater);
@@ -92,9 +84,7 @@ static vectorint myqsort(const vectorint& arr)
     sorted_less_and_res.reserve(sorted_less_and_res.size() + sorted_greater.size() + 1);
     sorted_less_and_res.insert(sorted_less_and_res.end(), pivot);
     sorted_less_and_res.insert(sorted_less_and_res.end(), sorted_greater.begin(), sorted_greater.end());
-    cout << "result:";
-    print_vectorint(sorted_less_and_res);
-    cout << endl;
+    cout << "result:" << sorted_less_and_res << endl;
     return sorted_less_and_res;
 }
 
@@ -106,26 +96,18 @@ void test_myqsort()
     {
         vectorint arr = {5, 2, 8, 3, 6, 1, 9};
 
-        cout << "Исходный массив: ";
-        print_vectorint(arr);
-        cout << endl;
+        cout << "Исходный массив: " << arr << endl;
 
         vectorint res = myqsort(arr);
-        cout << "Получилось: ";
-        print_vectorint(res);
-        cout << endl;
+        cout << "Получилось: " << res << endl;
     }
 
     {
         vectorint arr = {5, 2, 8, 3, 6, 1, 9, 4, 7, 15, 10, 20, 11, 17, 12, 18, 13, 19, 14, 17, 15, 16};
 
-        cout << "Исходный массив: ";
-        print_vectorint(arr);
-        cout << endl;
+        cout << "Исходный массив: " << arr << endl;
 
         vectorint res = myqsort(arr);
-        cout << "Получилось: ";
-        print_vectorint(res);
-        cout << endl;
+        cout << "Получилось: " << res << endl;
     }
 }

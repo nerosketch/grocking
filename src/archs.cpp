@@ -31,9 +31,7 @@ static int sum(vectorint& vec)
 
 static void check_arr(vectorint& arr, const int expected_res)
 {
-    cout << "Исходный массив: ";
-    print_vectorint(arr);
-    cout << endl;
+    cout << "Исходный массив: " << arr << endl;
 
     int res = sum(arr);
 

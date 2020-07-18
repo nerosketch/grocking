@@ -18,8 +18,11 @@ using namespace std;
 #define spItem shared_ptr<T>
 
 
-template <class T>
-ostream& operator << (ostream& os, const list<T*>& lst)
+template<class T>
+class GraphItem;
+
+template<class T>
+ostream& operator<<(ostream& os, const list<T*>& lst)
 {
     os << "[";
     for (const auto& l : lst)
@@ -31,7 +34,19 @@ ostream& operator << (ostream& os, const list<T*>& lst)
 }
 
 
-template <class T>
+template<class T>
+ostream& operator<<(ostream& os, const deque<spGraphItem>& deq)
+{
+    os << "{";
+    for (const auto& el : deq) {
+        os << *el << ", ";
+    }
+    os << "}";
+    return os;
+}
+
+
+template<class T>
 class GraphItem {
 private:
     spItem _element;
@@ -66,14 +81,9 @@ public:
         return os;
     }
 
-    friend ostream& operator << (ostream& os, const deque<spGraphItem>& deq)
+    friend ostream& operator<<(ostream& os, const spGraphItem& sp_obj)
     {
-        os << "{";
-        for (const auto& el : deq)
-        {
-            os << *el->_element << ", ";
-        }
-        os << "}";
+        os << sp_obj->_element;
         return os;
     }
 
@@ -96,7 +106,7 @@ public:
 
     spGraphItem findElement(const T& required_element)
     {
-        deque<spGraphItem > deq;
+        deque<spGraphItem> deq;
         // заполняем очередь потомками текущего элемента
         deq.assign(_children.begin(), _children.end());
 
@@ -118,7 +128,7 @@ public:
                 // уже искали этот элемент
                 cout << "уже искали этот элемент (" << *el << ")" << endl;
 
-                deq_it ++;
+                deq_it++;
                 continue;
             }
 
@@ -132,7 +142,7 @@ public:
             cout << "Теперь список проверенных = " << checked << endl;
             cout << " -  очередь сейчас = " << deq << endl;
 
-            deq_it ++;
+            deq_it++;
         }
 
         // если дошли сюда значит ничего не нашли
